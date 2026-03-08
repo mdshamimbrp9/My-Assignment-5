@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment-05</title>
+  <link rel="shortcut icon" href="./assets/Closed- Status .png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- taiwind css link & daisyui link  -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- font awesome link  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- font awesome CDN link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <!-- font family style for CSS  -->
+  <style>
+    * {
+      font-family: "Geist", sans-serif;
+    }
+  </style>
+
+</head>
+
+<body class="bg-[#F8FAFC]">
+
+  <!-- header section  -->
+  <header class="w-[90%] border-b-3 border-gray-100 mx-auto pb-3">
+    <div class="header-container flex flex-col gap-4 md:flex-row justify-between max-w-[1150px] m-auto mt-4">
+      <!-- div left  -->
+      <div class="left flex items-center gap-1">
+        <div>
+          <img class="w-[30px] h-[30px]" src="./assets/github-logo.png" alt="">
+        </div>
+        <div>
+          <p>GitHub Issues Tracker</p>
+        </div>
+      </div>
+
+      <!-- div right  -->
+      <div class="right flex gap-4 items-center text-center">
+        <div>
+          <label class="input">
+            <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.3-4.3"></path>
+              </g>
+            </svg>
+            <input type="search" required placeholder="Search issues..." />
+          </label>
+        </div>
+        <div>
+          <button class="btn btn-primary"> New Issue</button>
+        </div>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- filter button section  -->
+  <section class="w-11/12 mx-auto">
+    <div class="mt-10 shadow-sm bg-white w-full h-[82px] pt-5 p-4 rounded-lg flex gap-4 ">
+      <button id="all-filter-btn" class="btn btn-soft bg-blue-700 text-white">All</button>
+      <button id="open-filter-btn" class="btn btn-soft  bg-gray-100">Open</button>
+      <button id="closed-filter-btn" class="btn btn-soft  bg-gray-100">Closed</button>
+    </div>
+  </section>
+
+  <!-- issue card section  -->
+  <section class="w-11/12 mx-auto shadow-sm bg-white h-[82px] mt-8 p-5 rounded-lg">
+    <div class="issue-container flex justify-between">
+      <!-- left card -->
+      <div class="left flex justify-between">
+        <div class="flex items-center gap-2">
+          <img src="./assets/Aperture.png" alt="">
+          <div class="">
+            <p class="font-bold text-[18px]"><span id="total-count">0</span> issues</p>
+            <p class="text-[#64748B] text-[14px]">Track and manage your project issues</p>
+          </div>
+        </div>
+      </div>
+      <!-- right card -->
+      <div class="right flex items-center gap-5">
+        <span class="h-[10px] w-[10px] rounded-full bg-green-500"></span>
+        <p class="text-[12px]">Open</p>
+        <span class="h-[10px] w-[10px] rounded-full bg-purple-500"></span>
+        <p class="text-[12px]">Closed</p>
+      </div>
+    </div>
+  </section>
+  <!-- card section container  -->
+  <div id="card-container" class="grid grid-cols-4 space-y-5 w-11/12 mx-auto mt-8 mb-10 gap-5 ">
+
+
+  </div>
+
+  <!-- model card section  -->
+  <section>
+    <dialog id="modalDetails" class="modal">
+      <div class="modal-box">
+        <div id="modelTitle" class="space-y-2">
+          <!-- modal digaln  -->
+        </div>
+
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- close the modal -->
+            <button class="btn btn-primary">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
+
+  </section>
+
+
+  <script src="./homeScript.js"></script>
+</body>
+
+</html>
