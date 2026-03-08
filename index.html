@@ -4,11 +4,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Assignment-05</title>
+  <link rel="shortcut icon" href="./assets/Closed- Status .png" type="image/x-icon">
+  <!-- taiwind css link & daisyui link  -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- font awesome link  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- font awesome CDN link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <!-- font family style for CSS  -->
+  <style>
+    * {
+      font-family: "Geist", sans-serif;
+    }
+  </style>
+
 </head>
 
-<body>
-  <h1>Hello World</h1>
+<body class="">
+  <div class="flex justify-center">
+    <div class="bg-white p-8 mt-[70px] rounded-xl shadow-sm border border-gray-100 w-[500px] h-[743px] mb-[70px] ">
+
+      <div class="flex flex-col items-center mb-8">
+
+        <img src="./assets/github-logo.png" alt="GitHub Logo" class="">
+
+
+        <h1 class="text-2xl font-bold text-slate-800">GitHub Issues Tracker</h1>
+        <p class="text-slate-500 text-sm mt-1">Sign in to manage your issues</p>
+      </div>
+
+      <div class="space-y-5">
+        <div>
+          <label class="block text-sm font-semibold text-slate-700 mb-1">Username</label>
+          <!-- Username -->
+          <input type="text" id="username" placeholder="Enter Username"
+            class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all">
+          <p class="text-xs text-indigo-600 mt-1">Default: admin</p>
+        </div>
+
+        <div>
+          <label class="block text-sm font-semibold text-slate-700 mb-1">Password</label>
+          <!-- Password -->
+          <input type="password" id="password" placeholder="Enter Password"
+            class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all">
+          <p class="text-xs text-indigo-600 mt-1">Default: admin123</p>
+        </div>
+
+        <button id="submit" type="submit"
+          class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-lg shadow-lg shadow-indigo-200 transition-colors">
+          Sign In
+        </button>
+      </div>
+
+      <div class="relative my-4">
+        <div class="absolute inset-0 flex items-center">
+          <span class="w-full border-t border-gray-200"></span>
+        </div>
+        <div class="relative flex justify-center text-xs uppercase">
+          <span class="bg-white px-2 text-slate-400 font-medium">OR</span>
+        </div>
+      </div>
+
+      <div class="bg-slate-50 rounded-lg p-5 text-center border border-gray-50">
+        <p class="text-xs text-slate-500 mb-2 font-medium">Demo Credentials:</p>
+        <div class="text-sm text-slate-700">
+          <p><span class="font-bold">Username</span>: admin</p>
+          <p><span class="font-bold ">Password</span>: admin123</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./indexScript.js"></script>
 </body>
 
 </html>
