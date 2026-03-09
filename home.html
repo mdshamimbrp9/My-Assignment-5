@@ -58,11 +58,11 @@
                 <path d="m21 21-4.3-4.3"></path>
               </g>
             </svg>
-            <input type="search" required placeholder="Search issues..." />
+            <input id="input-search" type="search" required placeholder="Search issues..." />
           </label>
         </div>
         <div>
-          <button class="btn btn-primary"> New Issue</button>
+          <button class="btn btn-primary text-[12px]">New Issue</button>
         </div>
 
       </div>
@@ -80,10 +80,10 @@
   </section>
 
   <!-- issue card section  -->
-  <section class="w-11/12 mx-auto shadow-sm bg-white h-[82px] mt-8 p-5 rounded-lg">
-    <div class="issue-container flex justify-between">
+  <section class="w-11/12 mx-auto shadow-sm bg-white h-[82px] mt-8 p-5  rounded-lg">
+    <div class="issue-container md:flex  justify-between">
       <!-- left card -->
-      <div class="left flex justify-between">
+      <div class="left flex max-sm:pb-5 justify-between">
         <div class="flex items-center gap-2">
           <img src="./assets/Aperture.png" alt="">
           <div class="">
@@ -93,7 +93,7 @@
         </div>
       </div>
       <!-- right card -->
-      <div class="right flex items-center gap-5">
+      <div class="right flex items-center gap-5 ">
         <span class="h-[10px] w-[10px] rounded-full bg-green-500"></span>
         <p class="text-[12px]">Open</p>
         <span class="h-[10px] w-[10px] rounded-full bg-purple-500"></span>
@@ -101,8 +101,9 @@
       </div>
     </div>
   </section>
-  <!-- card section container  -->
-  <div id="card-container" class="grid grid-cols-4 space-y-5 w-11/12 mx-auto mt-8 mb-10 gap-5 ">
+
+  <!-- card section container function -->
+  <div id="card-container" class="grid grid-cols-1 md:grid-cols-4 space-y-5 w-11/12 mx-auto mt-8 mb-10 gap-5 ">
 
 
   </div>
@@ -123,10 +124,7 @@
         </div>
       </div>
     </dialog>
-
-
   </section>
-
 
   <script src="./homeScript.js"></script>
 </body>
