@@ -2,6 +2,7 @@
 const allFilterBtn = document.getElementById('all-filter-btn');
 const openFilterBtn = document.getElementById('open-filter-btn');
 const closedFilterBtn = document.getElementById('closed-filter-btn');
+const searchButton = document.getElementById("input-search");
 
 const filterButtons = [allFilterBtn, openFilterBtn, closedFilterBtn];
 // button style js
@@ -33,7 +34,7 @@ document.getElementById("open-filter-btn").addEventListener("click", () => {
 
 document.getElementById("closed-filter-btn").addEventListener("click", () => {
   const closedBtn = allissues.filter((open) => open.status === "closed")
-  console.log(closedBtn)
+  // console.log(closedBtn)
   displayCard(closedBtn)
 
 })
@@ -171,5 +172,16 @@ const displayModal = (eliment) => {
     `;
 
 };
+
+// search function 
+document.getElementById("input-search").addEventListener("input", (e) => {
+  const searchText = e.target.value.toLowerCase();
+  const filtered = allissues.filter(issue =>
+    issue.title.toLowerCase().includes(searchText)
+  );
+  displayCard(filtered);
+});
+
+
 
 card();
